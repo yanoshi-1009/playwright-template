@@ -5,6 +5,7 @@ const Page = require("./Page.js");
   "use strict";
 
   try {
+    const {} = config;
     const page = new Page();
 
     await page.init();

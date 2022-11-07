@@ -1,5 +1,16 @@
-// import '../style/style.scss';
+const config = require("./config.js");
+const Page = require("./Page.js");
 
-(() => {
-  'use strict';
+(async () => {
+  "use strict";
+
+  try {
+    const page = new Page();
+
+    await page.init();
+
+    await page.close();
+  } catch (error) {
+    console.error(error);
+  }
 })();

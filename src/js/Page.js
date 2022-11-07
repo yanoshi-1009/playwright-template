@@ -8,7 +8,8 @@ module.exports = class Page {
   async init() {
     this.browser = await chromium.launch({
       channel: "chrome",
-      headless: false
+      headless: false,
+      viewport: null
     });
     this.context = await this.browser.newContext({
       storageState: state
